@@ -14,9 +14,29 @@ reverse(""); // ""
 
 
 function reverse(str) {
-  // Your code here 
-}
+/*  debugger
+  let strNew = "";
+  if (str === ""){
+    return str;
+  }
 
+  let n = str.length - 1;
+  if (n < 0) { 
+    return strNew;
+
+  }
+    
+  strNew = strNew + str.charAt(n);
+  n--;
+  return strNew.charAt(n) + reverse(str);*/
+
+  if (str === ""){
+    return str;
+  }
+
+  return reverse(str.substring(1)) + str.charAt(0);
+}
+console.log(reverse("house"));
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
