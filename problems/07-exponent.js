@@ -21,9 +21,32 @@ exponent(5, 5); // 3125
 ***********************************************************************/
 
 function exponent(num, power) {
-    // Your code here 
+    debugger
+    if(power >= 0) {
+        let product = 1
+        if(power === 0) {
+            return product
+        }
+        
+        product *= num
+        power--
+
+        return product *= exponent(num, power)
+    } else {
+        let product = 1
+        if(power === 1) {
+            return 1/product
+        }
+
+        product *= num
+        power++
+
+        return 1/product * exponent(num, power)
+    }
 }
-  
+
+console.log(exponent(2, -2))
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
     module.exports = exponent;
