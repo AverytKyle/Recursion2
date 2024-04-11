@@ -47,13 +47,10 @@ function advancedExponent(b, n) {
    } else if (n === 1) {
     return b
    } else if(n % 2 === 0) {
-    n--
-    return  b * advancedExponent(b, (n-1) / 2) ** 2
+    return advancedExponent(b, n / 2) ** 2
    } else {
-    n--
-    return b * (advancedExponent(b, n / 2)) ** 2
+    return b * advancedExponent(b, (n-1) / 2) ** 2
    }
-    
 }
 
 
